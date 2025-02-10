@@ -213,8 +213,8 @@
             { title: "Current Time", info: "2:44 PM." },
             { title: "Address of Origin", info: "2764 W Lake of the Isles Pkwy, Minneapolis, MN 55416." },
             { title: "Address of Destination", info: "1866 Dudley Ave, St Paul, MN 55108." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "10.02 miles." },
+            { title: "Estimated Time to Destination", info: "21 minutes." },
             { title: "State of Charge of Battery", info: "43% charge." },
             { title: "Range of Current Battery", info: "129 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "97 miles." },
@@ -232,10 +232,10 @@
                 name: 'Nicollet Ave, South of 19th',
 
                 location: '1901 Nicollet Ave, Minneapolis, MN 55403, USA',
-                originDistance: '0',
-                originTime: '0',
-                destDistance: '0',
-                destTime: '0',
+                originDistance: '2.51',
+                originTime: '12',
+                destDistance: '6.88',
+                destTime: '16',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -271,10 +271,10 @@
                 name: '6th Ave SE & 4th St SE Parking',
 
                 location: '409 6th Ave SE, Minneapolis, MN 55414, USA',
-                originDistance: '0',
-                originTime: '0',
-                destDistance: '0',
-                destTime: '0',
+                originDistance: '5.09',
+                originTime: '14',
+                destDistance: '4.06',
+                destTime: '12',
 
                 
                 waitTime: [
@@ -936,8 +936,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
